@@ -1,0 +1,263 @@
+html,
+body,
+section {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    background-color: #dffbd6;
+    color: #201515;
+}
+
+body {
+    background: linear-gradient(345deg, rgba(129, 171, 138, 0.436), transparent 80%);
+
+}
+
+section {
+    background-color: transparent;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    z-index: 10;
+    background-color: #dffbd692;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+}
+
+h1 {
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 25px;
+    margin: 0;
+    padding: 0.1em;
+    color: rgb(40, 115, 65);
+    text-shadow: 0 0 10px #dffbd6;
+    transition: transform 0.3s ease-in-out;
+}
+
+h1:hover {
+    transform: scale(1.03);
+}
+
+h1:active {
+    transform: scale(1);
+}
+
+h2 {
+    color: rgba(32, 21, 21, 0.6);
+}
+
+h3 {
+    align-self: flex-start;
+    margin-bottom: 0;
+}
+
+nav {
+    width: auto;
+    /* background-color: aqua; */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    font-weight: 600;
+    padding: 0.5em 0.8em;
+    border-radius: 100px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+nav ul li:hover {
+    background-color: rgba(32, 21, 21, 0.1);
+}
+
+nav ul li:active {
+    transform: scale(0.98);
+}
+
+header a {
+    text-decoration: none;
+    color: unset;
+    /* user-select: none; */
+}
+
+#logo {
+    height: 500px;
+    width: 500px;
+}
+
+#logo {
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+
+}
+
+
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y proximity; */
+
+}
+
+main>section {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* background: #7c68ee; */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    justify-self: center;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3em 2em;
+    padding-top: 8vh;
+}
+
+#photo-grid {
+    padding-top: 1em;
+    grid-area: auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#photo-grid img {
+    max-width: 250px;
+}
+
+
+footer p {
+    align-self: center;
+}
+
+@media (max-width: 700px) {
+
+
+    header {
+        display: block;
+        height: 8em;
+    }
+
+    main {
+        text-align: center;
+        width: 100vw;
+        overflow-x: hidden;
+        scroll-snap-type: none;
+    }
+
+    main>section {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        /* background: #7c68ee; */
+        scroll-snap-align: unset;
+        scroll-snap-stop: unset;
+        justify-self: center;
+    }
+
+    /* h1 {
+        margin: 0;
+        font-size: 10vw;
+    }
+
+    h2 {
+        font-size: 2em;
+        width: 100vw;
+        padding: 0;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    } */
+
+    h4 {
+        font-size: 1em;
+    }
+
+    .name {
+        margin-bottom: 0;
+        padding: 0em 1em;
+    }
+
+    nav {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: space-around;
+    }
+
+    .content {
+        padding-bottom: 2em;
+    }
+
+    section {
+        text-align: left;
+        width: 100vw;
+        height: unset;
+        overflow-x: hidden;
+    }
+
+
+    p {
+        font-size: 0.9em;
+    }
+
+    #logo {
+        height: 300px;
+        width: 300px;
+    }
+
+
+    img {
+        max-width: 85vw;
+    }
+
+    .logo {
+        height: 130px;
+        width: 225px;
+        object-fit: cover;
+    }
+
+}
